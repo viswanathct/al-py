@@ -1,0 +1,19 @@
+# Ignores
+## General
+.*
+
+## Stack
+*.py[cod]
+/dist
+/build
+*.egg-info
+
+# Excludes
+## General
+!.git*
+
+## Dev
+!.editorconfig
+
+## Stack
+# None, yet.
