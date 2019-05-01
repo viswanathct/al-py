@@ -8,6 +8,22 @@
 * Considerably improves readability.
 * Allows for a hybrid-approach, by bringing together concepts from FP and Non-FP patterns.
 
+## Example
+```py
+# Process a list of orders with a flow.
+feed(Orders, flow(
+	verifyStock,
+	verifyPayment,
+	dispatch,
+	sendMail,
+))
+```
+**For more examples, check the [examples](https://github.com/viswanathct/al-py/tree/master/examples) dir**.
+```sh
+# Or run the following (with python 2.7+):
+$ python ./examples/cheatsheet.py
+```
+
 ## Installation
 ```sh
 $ pip install ffffffff
@@ -51,13 +67,9 @@ $ pip install ffffffff
 
 	* All the key functions start with the letter, **F**.
 
-	* *And **ffffffff** is also the hex code of white.*
-
 # Development
 
 ## ToDo
-
-* Bring in the cheatsheet example from al-js.
 
 * Write tests.
 

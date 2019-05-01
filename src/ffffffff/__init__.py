@@ -17,9 +17,9 @@ def forgive(*flows): # Helps in continuing the flow with further elements in the
 	return lambda data: flow(*flows)(data) or None
 
 def flip(*flows): # Expects a failure to coninue the flow. Helps in incorporating external helpers.
-	return lambda data: False if flow(*flows)(data) == False else None
+	return lambda data: None if flow(*flows)(data) == False else False
 
-def fail(): # Syntactic sugar, used to signify a break in the flow.
+def fail(*dummy): # Syntactic sugar, used to signify a break in the flow.
 	return False
 
 def fork(forkFn, defaultFlow, forkedFlow): # Helps in altering between two flows.
